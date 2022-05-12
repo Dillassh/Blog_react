@@ -1,7 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function Blog() {
-	return <div>Blog</div>;
+	const params = useParams();
+
+	return <h1>Blog - {params.blogId}</h1>;
 }
 
 export default Blog;
