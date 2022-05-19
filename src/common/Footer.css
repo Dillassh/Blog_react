@@ -1,0 +1,14 @@
+.footer_container {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(136, 137, 151);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+.footer_container > img {
+    width: 180px;
+}

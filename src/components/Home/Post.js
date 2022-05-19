@@ -1,20 +1,41 @@
-import "./Post.css";
-import { Col } from "reactstrap";
+import { Col, Button } from "reactstrap";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Post({ post }) {
+	const [showButton, setShowButton] = useState(false);
 	return (
-		<Col xs='12' md='6'>
-			<img
-				src={`https://picsum.photos/seed/${post.id}/450`}
+		<Col
+			xs='12'
+			md='6'
+			onMouseEnter={() => {
+				setShowButton(true);
+			}}
+			onMouseLeave={() => {
+				setShowButton(false);
+			}}>
+			<Link
+				to={"/blog/" + post.id}
 				style={{
-					height: "300px",
-					objectFit: "cover",
-					width: "100%",
-					marginTop: "50px",
-				}}
-			/>
-			<h2>{post.title}</h2>
-			<p>{post.title}</p>
+					textDecoration: "none",
+					color: "black",
+				}}>
+				<img
+					alt=''
+					src={`https://picsum.photos/seed/${post.id}/600`}
+					style={{
+						height: "300px",
+						objectFit: "cover",
+						width: "100%",
+						marginTop: "50px",
+					}}
+				/>
+				<h2>{post.title}</h2>
+				<p>{post.body}</p>
+			</Link>
+			<div style={{ minHeight: "50px" }}>
+				{showButton && <Button outline>Add to wishlist!</Button>}
+			</div>
 		</Col>
 	);
 }
