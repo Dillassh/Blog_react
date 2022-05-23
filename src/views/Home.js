@@ -3,7 +3,6 @@ import { Container, Row, Button } from "reactstrap";
 import { useState, useEffect } from "react";
 import Post from "../components/Home/Post";
 import Footer from "../common/Footer";
-import { Link } from "react-router-dom";
 
 function Home() {
 	const counterSize = 6;
