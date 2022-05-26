@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Button } from "reactstrap";
 import { useState, useEffect } from "react";
 import Footer from "../common/Footer";
 import "./Blog.css";
